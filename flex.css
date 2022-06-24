@@ -1,0 +1,131 @@
+/* Body */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 20px;
+    box-sizing:border-box;
+}
+
+:root{
+    --background-color:hsl(0, 0%, 95%) ;
+    --font-size: 15px;
+    --text-transform:uppercase;
+
+}
+
+body{
+    background-color: var(--background-color);
+    
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width:1440px;
+    padding: 0px; 
+}
+
+
+/* Navbar */
+.navbar{
+    background-color: var(--background-color);
+    text-align: center;
+    text-transform: var(--text-transform);
+    text-decoration: none;
+    font-family:'Lexend Deca';
+}
+
+/* boxes */
+.container .box-container{
+    display: flex;
+    width:900px; 
+}
+
+.box{
+    color:hsla(0, 0%, 100%, 0.75);
+    height: 450px;
+    flex-basis:1000px;
+}
+
+h1{
+    text-transform: var(--text-transform);
+    color:hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display';
+}
+
+h1, p{
+    padding:10px;
+    max-width: 200px;
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom:70px;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family:'Lexend Deca';
+    font-size: var(--font-size);
+}
+
+.sedans{
+    background-color:hsl(31, 77%, 52%) ;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.suvs{
+    background-color:hsl(184, 100%, 22%);
+    
+}
+
+.luxury{
+    background-color:hsl(179, 100%, 13%);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.box input{
+width: 50%;
+padding: 12px;
+border-radius: 50px;
+font-size: var(--font-size);
+background-color:hsl(0, 0%, 95%);
+font-family:'Lexend Deca';
+font-size: var(--font-size);
+}
+
+.sedans input{
+    border: hsl(31, 77%, 52%) solid  5px;
+    color: hsl(31, 77%, 52%);
+}
+
+.suvs input{
+    border:hsl(184, 100%, 22%) solid  5px;
+    color:hsl(184, 100%, 22%);
+
+}
+
+.luxury input{
+    border: hsl(179, 100%, 13%) solid 5px;
+    color: hsl(179, 100%, 13%);
+}
+
+/* Responsive Design */
+@media screen and (max-width:872px){
+    /* Body */
+    .container{
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Box */
+    .box-container{
+        flex-direction:column;
+    }
+
+    .box{
+       flex-basis: 500px; 
+    }
+}
