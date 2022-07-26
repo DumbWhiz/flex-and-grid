@@ -1,77 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
     <title>Grid Design</title>
 </head>
 <style>
-    *{
-        margin:0;
-        padding:0;
+    * {
+        margin: 0;
+        padding: 0;
     }
-    body{
+
+    body {
         background-color: #000000;
+        height: 500px;
+        display: grid;
+        align-items: center;
+    }
+
+    .navbar {
+        background-color: var(--background-color);
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Lexend Deca';
+    }
+
+
+    .navbar a {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .navbar a:hover {
+        color: hsl(0, 8%, 60%);
+    }
+
+    .container {
+        margin: 20px;
+        max-width: 50%;
+        position: relative;
+        left: 25%;
+
     }
 
     main .box-container {
-        max-width: 350px;
         gap: 5px;
         padding: 2em;
         display: grid;
         align-items: stretch;
-        
+
+
 
         grid-template-areas:
-        'a a a b b'
-        'c c d d d'
-        'c c e e  e'  ;
+            'a a a b b'
+            'c c d d d'
+            'c c e e  e';
     }
 
-    .box-1{
+    .box-1 {
         background-color: red;
         grid-area: a;
     }
 
-    .box-2{
-        background-color:orange; 
+    .box-2 {
+        background-color: orange;
         grid-area: b;
     }
-        .box-3{
-        background-color:green;
+
+    .box-3 {
+        background-color: green;
         grid-area: c;
     }
 
-    .box-4{
-        background-color:blue;
+    .box-4 {
+        background-color: blue;
         grid-area: d;
-        }
-    
-
-    .box-5{
-        background-color:blue;
-        grid-area:e;
     }
 
 
-    .box-container > div{
+    .box-5 {
+        background-color: blue;
+        grid-area: e;
+    }
+
+
+    .box-container>div {
         padding: 2em;
-        
+
     }
 </style>
+
 <body>
-    <nav>
+    <nav class="navbar">
         <a href="index.html">Flex</a>
     </nav>
     <main class="container">
         <div class="box-container">
-        <div class="box-1"></div>
-        <div class="box-2"></div>
-        <div class="box-3"></div>
-        <div class="box-4"></div>
-        <div class="box-5"></div>
-    </div>
+            <div class="box-1"></div>
+            <div class="box-2"></div>
+            <div class="box-3"></div>
+            <div class="box-4"></div>
+            <div class="box-5"></div>
+        </div>
     </main>
 </body>
+
 </html>
